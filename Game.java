@@ -19,7 +19,8 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
-        
+    
+    
     /**
      * Create the game and initialise its internal map.
      */
@@ -115,12 +116,16 @@ public class Game
         else if (commandWord.equals("quit")) {
             wantToQuit = quit(command);
         }
+        //18
+        //else if (commandWord.equals("show")) {
+             //System.out.println(parser.getCommandWords().showAll());
+        
         // else command not recognised.
         return wantToQuit;
     }
 
     // implementations of user commands:
-
+    //18
     /**
      * Print out some help information.
      * Here we print some stupid, cryptic message and a list of the 
@@ -132,10 +137,10 @@ public class Game
         System.out.println("around at the university.");
         System.out.println();
         System.out.println("Your command words are:");
-        parser.showCommands();
+        //System.out.println(parser.getCommandWords().showAll());   
     }
 
-    /** 
+     /** 
      * Try to in to one direction. If there is an exit, enter the new
      * room, otherwise print an error message.
      */

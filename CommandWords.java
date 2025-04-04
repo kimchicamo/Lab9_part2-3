@@ -12,8 +12,9 @@
 public class CommandWords
 {
     // a constant array that holds all valid command words
+    //18
     private static final String[] validCommands = {
-        "go", "quit", "help"
+        "go", "quit", "help","show"
     };
 
     /**
@@ -37,15 +38,12 @@ public class CommandWords
         // if we get here, the string was not found in the commands
         return false;
     }
-
+    //18
     /**
      * Print all valid commands to System.out.
      */
-    public void showAll() 
+    public String showAll() 
     {
-        for(String command: validCommands) {
-            System.out.print(command + "  ");
-        }
-        System.out.println();
+        return String.join(" ", validCommands);
     }
 }
